@@ -23,7 +23,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Link from "next/link";
-import { setIsSidebarCollapsed } from "@/app/state";
+import { setIsSidebarCollapsed } from "@/state";
 
 const Sidebar = () => {
   const [showProjects, setShowProjects] = useState(true);
