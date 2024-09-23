@@ -89,7 +89,7 @@ const Sidebar = () => {
           className="flex w-full items-center justify-between px-8 py-3 text-black dark:text-white"
         >
           <span className="">Projects</span>
-          {showProjects ? (
+          {!showProjects ? (
             <ChevronUp className="h-5 w-5" />
           ) : (
             <ChevronDown className="h-5 w-5" />
