@@ -11,6 +11,7 @@ const Header = ({ name, buttonComponent, isSmallText = false }: Props) => {
       >
         {name}
       </h1>
+      {buttonComponent}
     </div>
   );
 };
