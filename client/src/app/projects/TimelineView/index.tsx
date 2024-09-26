@@ -19,6 +19,7 @@ const TimelineView = ({ id, setIsModalNewTaskOpen }: Props) => {
     isLoading,
   } = useGetTasksQuery({ projectId: Number(id) });
 
+  // DisplayOptions is from gantt-task-react package
   const [displayOptions, setDisplayOptions] = useState<DisplayOption>({
     viewMode: ViewMode.Month,
     locale: "en-US",
@@ -48,9 +49,8 @@ const TimelineView = ({ id, setIsModalNewTaskOpen }: Props) => {
   };
 
   if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>An error occurred while fetching tasks</div>;
+  if (error || !tasks) return <div>An error occurred while fetching tasks</div>;
 
-  // DisplayOptions is from gantt-task-react package
   return (
     <div className="px-4 xl:px-6">
       <div className="flex flex-wrap items-center justify-between gap-2 py-5">
