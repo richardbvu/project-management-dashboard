@@ -34,7 +34,7 @@ export const dataGridSxStyles = (isDarkMode: boolean) => {
       height: "7px",
     },
     "& ::-webkit-scrollbar-thumb": {
-      "border-radius": "15px",
+      // "border-radius": "15px",
       "background-color": "#6d6d6dc9",
     },
   };
