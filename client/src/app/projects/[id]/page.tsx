@@ -1,3 +1,4 @@
+// it is not a child of a client component, it is a it's own separate page, therefore must have "use client"
 "use client";
 
 import { useState } from "react";
