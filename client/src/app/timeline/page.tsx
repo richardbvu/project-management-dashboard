@@ -9,7 +9,7 @@ import React, { useMemo, useState } from "react";
 
 type TaskTypeItems = "task" | "milestone" | "project";
 
-const TimelineView = () => {
+const Timeline = () => {
   const isDarkMode = useAppSelector((state) => state.global.isDarkMode);
   const { data: projects, isLoading, isError } = useGetProjectsQuery();
 
@@ -81,4 +81,4 @@ const TimelineView = () => {
     </div>
   );
 };
-export default TimelineView;
+export default Timeline;
