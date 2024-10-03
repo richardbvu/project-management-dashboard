@@ -18,6 +18,8 @@ const Search = () => {
     skip: searchTerm.length < 3,
   });
 
+  // LODASH  - DEBOUNCE FUNCTION
+  // prevent from over searching, every 500ms
   const handleSearch = debounce(
     (event: React.ChangeEvent<HTMLInputElement>) => {
       setSearchTerm(event.target.value);
@@ -25,6 +27,7 @@ const Search = () => {
     500,
   );
 
+  //   LODASH
   useEffect(() => {
     return handleSearch.cancel;
   }, [handleSearch.cancel]);
