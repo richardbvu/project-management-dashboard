@@ -15,7 +15,7 @@ const Search = () => {
     isLoading,
     isError,
   } = useSearchQuery(searchTerm, {
-    skip: searchTerm.length < 3,
+    skip: searchTerm.length < 2,
   });
 
   // LODASH  - DEBOUNCE FUNCTION
