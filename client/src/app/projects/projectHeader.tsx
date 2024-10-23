@@ -4,7 +4,6 @@ import {
   Filter,
   Grid3x3,
   List,
-  Plus,
   PlusSquare,
   Share2,
   Table,
@@ -16,7 +15,7 @@ type Props = {
   activeTab: string;
   setActiveTab: (tabName: string) => void;
 };
-const projectHeader = ({ activeTab, setActiveTab }: Props) => {
+const ProjectHeader = ({ activeTab, setActiveTab }: Props) => {
   const [isModalNewProjectOpen, setIsModalNewProjectOpen] = useState(false);
   return (
     <div className="px-4 xl:px-6">
@@ -108,4 +107,4 @@ const TabButton = ({ name, icon, setActiveTab, activeTab }: TabButtonProps) => {
   );
 };
 
-export default projectHeader;
+export default ProjectHeader;
